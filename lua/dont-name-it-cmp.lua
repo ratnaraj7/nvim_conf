@@ -58,6 +58,7 @@ return {
 			},
 			mapping = cmp.mapping.preset.insert({
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
+				["<C-Space>"] = cmp.mapping.complete(),
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
