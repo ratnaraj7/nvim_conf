@@ -116,5 +116,31 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
+
+		lspconfig.clangd.setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		lspconfig.jsonls.setup {
+			capabilities = capabilities,
+			on_attach = on_attach,
+			settings = {
+				json = {
+					schemas = {
+						{
+							fileMatch = { 'package.json' },
+							url = 'https://json.schemastore.org/package.json',
+						},
+					},
+				},
+			},
+		}
+
+
+		lspconfig.pylsp.setup {
+			capabilities = capabilities,
+			on_attach = on_attach,
+		}
 	end,
 }
