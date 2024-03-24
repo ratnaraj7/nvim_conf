@@ -9,6 +9,7 @@ return {
 	{ import = "lua-line" },
 	{ import = "mini-surround" },
 	{ import = "mini-pairs" },
+	{ import = "codeium" },
 
 	-- not working
 	--{ import = "cheatsh" },
