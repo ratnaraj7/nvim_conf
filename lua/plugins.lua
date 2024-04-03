@@ -10,6 +10,8 @@ return {
 	{ import = "mini-surround" },
 	{ import = "mini-pairs" },
 	{ import = "codeium" },
+	{ import = "flitter" },
+	{ import = "leaper" },
 
 	-- not working
 	--{ import = "cheatsh" },
