@@ -122,25 +122,34 @@ return {
 			on_attach = on_attach,
 		})
 
-		lspconfig.jsonls.setup {
+		lspconfig.jsonls.setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 			settings = {
 				json = {
 					schemas = {
 						{
-							fileMatch = { 'package.json' },
-							url = 'https://json.schemastore.org/package.json',
+							fileMatch = { "package.json" },
+							url = "https://json.schemastore.org/package.json",
 						},
 					},
 				},
 			},
-		}
+		})
 
-
-		lspconfig.pylsp.setup {
+		lspconfig.pylsp.setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
-		}
+		})
+
+		lspconfig.docker_compose_language_service.setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		lspconfig.dockerls.setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
 	end,
 }

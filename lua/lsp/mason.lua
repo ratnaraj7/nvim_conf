@@ -2,6 +2,22 @@ return {
 	"williamboman/mason.nvim",
 	config = function()
 		local mason = require("mason")
-		mason.setup({})
+		mason.setup({
+			ensure_installed = {
+				"lua-language-server",
+				"rust-analyzer",
+				"tailwindcss-language-server",
+				"typescript-language-server",
+				"stylua",
+				"python-lsp-server",
+				"prettier",
+				"html-lsp",
+				"eslint_d",
+				"dockerfile-language-server",
+				"docker-compose-language-service",
+				"json-lsp",
+				"clangd",
+			},
+		})
 	end,
 }
