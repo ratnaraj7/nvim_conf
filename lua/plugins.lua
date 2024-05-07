@@ -12,6 +12,7 @@ return {
 	{ import = "codeium" },
 	{ import = "flitter" },
 	{ import = "leaper" },
+	{ import = "fidgeter" },
 
 	-- not working
 	--{ import = "cheatsh" },
