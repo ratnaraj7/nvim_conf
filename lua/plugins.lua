@@ -13,6 +13,11 @@ return {
 	{ import = "flitter" },
 	{ import = "leaper" },
 	{ import = "fidgeter" },
+	{ import = "colorizerer" },
+	{ import = "colorizer-tail" },
+	{ import = "parinferer" },
+	{ import = "yucker" },
+	{ import = "conformer" },
 
 	-- not working
 	--{ import = "cheatsh" },

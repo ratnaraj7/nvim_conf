@@ -58,10 +58,6 @@ return {
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 
 		-- configure language servers
-		lspconfig.html.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
 
 		lspconfig.lua_ls.setup({
 			capabilities = capabilities,
@@ -148,6 +144,23 @@ return {
 		})
 
 		lspconfig.dockerls.setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		lspconfig.htmx.setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			filetypes = { "html", "templ", "htmldjango" },
+		})
+
+		lspconfig.html.setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			filetypes = { "html", "templ", "htmldjango" },
+		})
+
+		lspconfig.tailwindcss.setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})

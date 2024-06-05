@@ -83,5 +83,9 @@ return {
 			region_check_events = "InsertEnter",
 			delete_check_events = "InsertLeave",
 		})
+
+		cmp.config.formatting = {
+			format = require("tailwindcss-colorizer-cmp").formatter,
+		}
 	end,
 }
