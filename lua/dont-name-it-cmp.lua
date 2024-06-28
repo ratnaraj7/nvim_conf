@@ -14,7 +14,8 @@ return {
 				{
 					"<tab>",
 					function()
-						return require("luasnip").jumpable(1) and "<Plug>luasnip-jump-next" or "<tab>"
+						return require("luasnip").jumpable(1) and "<Plug>luasnip-jump-next" or
+						    "<tab>"
 					end,
 					expr = true,
 					silent = true,
@@ -50,6 +51,12 @@ return {
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
 
+		luasnip.filetype_extend("javascript", { "html" })
+		luasnip.filetype_extend("javascriptreact", { "html" })
+		luasnip.filetype_extend("typescriptreact", { "html" })
+		luasnip.filetype_extend("htmldjango", { "html" })
+		luasnip.filetype_extend("templ", { "html" })
+
 		require("luasnip.loaders.from_vscode").lazy_load()
 
 		cmp.setup({
@@ -83,6 +90,7 @@ return {
 			region_check_events = "InsertEnter",
 			delete_check_events = "InsertLeave",
 		})
+
 
 		cmp.config.formatting = {
 			format = require("tailwindcss-colorizer-cmp").formatter,

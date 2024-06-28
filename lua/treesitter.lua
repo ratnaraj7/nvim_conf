@@ -3,7 +3,7 @@ return {
 	build = ":TSUpdate",
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
-		require("nvim-treesitter").setup({
+		require("nvim-treesitter.configs").setup({
 			ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
 			auto_install = true,
 			highlight = {

@@ -6,6 +6,7 @@ return {
 	},
 	config = function()
 		local lspconfig = require("lspconfig")
+		local util = require("lspconfig/util")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 		local keymap = vim.keymap
@@ -163,6 +164,33 @@ return {
 		lspconfig.tailwindcss.setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			filetypes = { "html", "templ", "htmldjango", "jsx", "typescriptreact", "rust", "templ" },
+		})
+
+
+		lspconfig.terraformls.setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			filetypes = { "terraform", "tf" },
+		})
+
+
+		lspconfig.gopls.setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			cmd = { "gopls" },
+			filetypes = { "go", "gomod", "gowork", "gotmpl", "templ" },
+			root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+			settings = {
+				gopls = {
+					gofumpt = true
+				}
+			}
+		})
+
+		lspconfig.templ.setup({
+			capabilities = capabilities,
+			on_attach = on_attach
 		})
 	end,
 }

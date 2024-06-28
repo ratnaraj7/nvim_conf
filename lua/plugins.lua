@@ -1,5 +1,5 @@
 return {
-	{ import = "colorscheme" },
+	{ import = "themes/ayu" },
 	{ import = "telescope" },
 	{ import = "dont-name-it-cmp" },
 	{ import = "lsp" },
@@ -18,6 +18,7 @@ return {
 	{ import = "parinferer" },
 	{ import = "yucker" },
 	{ import = "conformer" },
+	{ import = "linter" },
 
 	-- not working
 	--{ import = "cheatsh" },
