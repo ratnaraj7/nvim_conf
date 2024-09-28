@@ -8,6 +8,7 @@ return {
 				"rust-analyzer",
 				"tailwindcss-language-server",
 				"typescript-language-server",
+				"vtsls",
 				"stylua",
 				"python-lsp-server",
 				"prettier",

@@ -113,7 +113,7 @@ return {
 			},
 		})
 
-		lspconfig.tsserver.setup({
+		lspconfig.ts_ls.setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
@@ -171,30 +171,28 @@ return {
 			filetypes = { "html", "templ", "htmldjango", "jsx", "typescriptreact", "rust", "templ" },
 		})
 
-
 		lspconfig.terraformls.setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 			filetypes = { "terraform", "tf" },
 		})
 
-
 		lspconfig.gopls.setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 			cmd = { "gopls" },
-			filetypes = { "go", "gomod", "gowork", "gotmpl", },
+			filetypes = { "go", "gomod", "gowork", "gotmpl" },
 			root_dir = util.root_pattern("go.work", "go.mod", ".git"),
 			settings = {
 				gopls = {
-					gofumpt = true
-				}
-			}
+					gofumpt = true,
+				},
+			},
 		})
 
 		lspconfig.templ.setup({
 			capabilities = capabilities,
-			on_attach = on_attach
+			on_attach = on_attach,
 		})
 	end,
 }

@@ -19,6 +19,8 @@ return {
 	{ import = "yucker" },
 	{ import = "conformer" },
 	{ import = "linter" },
+	{ import = "daddybot" },
+	{ import = "dotenv" },
 
 	-- not working
 	--{ import = "cheatsh" },
